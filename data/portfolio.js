@@ -1,0 +1,68 @@
+// Catálogo editorial dos projetos publicados no site.
+// Para adicionar um ensaio autorizado, inclua um objeto neste array e as imagens locais.
+window.portfolioProjects = [
+  {
+    id: "ensaio-beira-mar",
+    title: "Ensaio à beira-mar",
+    category: "ensaios",
+    categoryLabel: "Ensaios fotográficos",
+    cover: "assets/ensaio-casal.jpg",
+    layout: "photo-card-tall",
+    description: "Direção leve, luz natural e espaço para o afeto aparecer sem pressa.",
+    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
+    sourceLabel: "Ver seleção no Instagram",
+    images: [
+      { src: "assets/ensaio-casal.jpg", alt: "Casal sorrindo durante ensaio fotográfico ao pôr do sol" },
+      { src: "assets/retrato-ensaio.jpg", alt: "Retrato feminino ao pôr do sol segurando um buquê" },
+      { src: "assets/momento-casal.jpg", alt: "Casal em momento de afeto à beira-mar" },
+    ],
+  },
+  {
+    id: "festa-15-anos",
+    title: "Festa de 15 anos",
+    category: "aniversarios",
+    categoryLabel: "Aniversários / 15 anos",
+    cover: "assets/festa-15-anos.jpg",
+    layout: "photo-card-wide",
+    description: "Uma narrativa que começa na cenografia e continua em cada gesto da celebração.",
+    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
+    sourceLabel: "Ver seleção no Instagram",
+    images: [
+      { src: "assets/festa-15-anos.jpg", alt: "Cenografia completa de festa de 15 anos em tons de lilás" },
+      { src: "assets/aniversariante.jpg", alt: "Aniversariante de 15 anos em frente ao bolo" },
+      { src: "assets/detalhes-festa.jpg", alt: "Detalhes de mesa e doces de uma festa de 15 anos" },
+    ],
+  },
+  {
+    id: "casamento-noite",
+    title: "Casamento à noite",
+    category: "casamentos",
+    categoryLabel: "Casamentos e cerimônias",
+    cover: "assets/casamento-entrada.jpg",
+    layout: "photo-card-tall",
+    description: "Chegadas, encontros e os pequenos sinais que fazem o dia ser só de vocês.",
+    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
+    sourceLabel: "Ver seleção no Instagram",
+    images: [
+      { src: "assets/casamento-entrada.jpg", alt: "Noiva entrando acompanhada durante casamento" },
+      { src: "assets/casamento-casal.jpg", alt: "Noiva e noivo durante a recepção de casamento" },
+      { src: "assets/casamento-familia.jpg", alt: "Família acompanhando a entrada do noivo" },
+    ],
+  },
+  {
+    id: "apresentacoes-infantis",
+    title: "Apresentações infantis",
+    category: "eventos",
+    categoryLabel: "Eventos e apresentações",
+    cover: "assets/evento-infantil-danca.jpg",
+    layout: "photo-card-wide",
+    description: "Cor, movimento e a espontaneidade de quem ainda está descobrindo o palco.",
+    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
+    sourceLabel: "Ver seleção no Instagram",
+    images: [
+      { src: "assets/evento-infantil-danca.jpg", alt: "Criança dançando em apresentação escolar" },
+      { src: "assets/evento-infantil-retrato.jpg", alt: "Retrato infantil com figurino junino" },
+      { src: "assets/evento-infantil-cor.jpg", alt: "Criança sorrindo em apresentação colorida" },
+    ],
+  },
+];
