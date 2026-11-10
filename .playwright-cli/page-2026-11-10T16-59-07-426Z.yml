@@ -1,0 +1,329 @@
+- generic [active] [ref=f2e1]:
+  - link "Ir para o conteúdo" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f2e3]:
+    - link "Matheus Barros — início" [ref=f2e4] [cursor=pointer]:
+      - /url: "#inicio"
+      - generic [ref=f2e5]: MB
+      - generic [ref=f2e6]: Matheus Barros
+    - button "Abrir menu" [ref=f2e7]
+  - main [ref=f2e12]:
+    - region [ref=f2e13]:
+      - generic [ref=f2e14]:
+        - paragraph [ref=f2e15]: Fotografia com verdade · Maracanaú
+        - paragraph [ref=f2e17]: Matheus Barros
+        - heading [level=1] [ref=f2e18]:
+          - text: Fotografia & filme.
+          - emphasis [ref=f2e19]: Memórias que permanecem.
+        - paragraph [ref=f2e20]: "Fotografia e filme para quem quer guardar a sensação inteira: o abraço, a festa, o movimento e tudo o que acontece entre uma pose e outra."
+        - generic [ref=f2e21]:
+          - link "Solicitar orçamento ↘" [ref=f2e22] [cursor=pointer]:
+            - /url: "#orcamento"
+            - text: Solicitar orçamento
+            - generic [ref=f2e23]: ↘
+          - link "Explorar portfólio ↓" [ref=f2e24] [cursor=pointer]:
+            - /url: "#trabalhos"
+            - text: Explorar portfólio
+            - generic [ref=f2e25]: ↓
+      - generic [ref=f2e27]:
+        - text: MB
+        - generic [ref=f2e36]:
+          - generic [ref=f2e37]: luz
+          - generic [ref=f2e38]: gesto
+          - generic [ref=f2e39]: memória
+        - generic [ref=f2e40]:
+          - generic [ref=f2e41]: rec
+          - generic [ref=f2e42]: f/2.8 · 1/250 · iso 400
+      - generic "Informações rápidas" [ref=f2e44]:
+        - generic [ref=f2e45]:
+          - strong [ref=f2e46]: Foto + filme
+          - generic [ref=f2e47]: um olhar completo
+        - generic [ref=f2e48]:
+          - strong [ref=f2e49]: 06 frentes
+          - generic [ref=f2e50]: do íntimo ao movimento
+    - region "Manifesto" [ref=f2e51]:
+      - paragraph [ref=f2e52]: 01 — O olhar
+      - generic [ref=f2e53]:
+        - heading [level=2] [ref=f2e54]:
+          - text: O instante passa.
+          - emphasis [ref=f2e55]: A sensação, não.
+        - generic [ref=f2e56]:
+          - paragraph [ref=f2e57]: "Meu trabalho é perceber o que acontece entre uma pose e outra: o gesto espontâneo, a luz certa, o riso que ninguém combinou. É ali que mora a fotografia que continua viva."
+          - link "Conheça o fotógrafo →" [ref=f2e58] [cursor=pointer]:
+            - /url: "#sobre"
+            - text: Conheça o fotógrafo
+            - generic [ref=f2e59]: →
+    - region [ref=f2e60]:
+      - generic [ref=f2e61]:
+        - generic [ref=f2e62]:
+          - paragraph [ref=f2e63]: 02 — Projetos
+          - heading [level=2] [ref=f2e64]:
+            - text: Histórias em
+            - emphasis [ref=f2e65]: capítulos.
+        - generic "Filtrar portfólio" [ref=f2e66]:
+          - button "Todos" [pressed] [ref=f2e67] [cursor=pointer]
+          - button "Ensaios" [ref=f2e68] [cursor=pointer]
+          - button "Aniversários" [ref=f2e69] [cursor=pointer]
+          - button "Eventos" [ref=f2e70] [cursor=pointer]
+          - button "Casamentos" [ref=f2e71] [cursor=pointer]
+      - generic [ref=f2e72]:
+        - button "Abrir álbum Festa de 15 anos" [ref=f2e73]:
+          - img "Cenografia completa de festa de 15 anos em tons de lilás" [ref=f2e75]
+          - generic [ref=f2e76]:
+            - generic [ref=f2e77]:
+              - generic [ref=f2e78]: Aniversários / 15 anos
+              - generic [ref=f2e79]: Festa de 15 anos
+            - generic [ref=f2e80]:
+              - text: 03 imagens
+              - generic [ref=f2e81]: ↗
+        - button "Abrir álbum Casamento à noite" [ref=f2e82]:
+          - img "Noiva entrando acompanhada durante casamento" [ref=f2e84]
+          - generic [ref=f2e85]:
+            - generic [ref=f2e86]:
+              - generic [ref=f2e87]: Casamentos e cerimônias
+              - generic [ref=f2e88]: Casamento à noite
+            - generic [ref=f2e89]:
+              - text: 03 imagens
+              - generic [ref=f2e90]: ↗
+        - button "Abrir álbum Apresentações infantis" [ref=f2e91]:
+          - img "Criança dançando em apresentação escolar" [ref=f2e93]
+          - generic [ref=f2e94]:
+            - generic [ref=f2e95]:
+              - generic [ref=f2e96]: Eventos e apresentações
+              - generic [ref=f2e97]: Apresentações infantis
+            - generic [ref=f2e98]:
+              - text: 03 imagens
+              - generic [ref=f2e99]: ↗
+        - button "Abrir álbum Andreia · 30 anos" [ref=f2e100]:
+          - img "Andreia com familiares diante da decoração de 30 anos" [ref=f2e102]
+          - generic [ref=f2e103]:
+            - generic [ref=f2e104]:
+              - generic [ref=f2e105]: Aniversários
+              - generic [ref=f2e106]: Andreia · 30 anos
+            - generic [ref=f2e107]:
+              - text: 03 imagens
+              - generic [ref=f2e108]: ↗
+        - button "Abrir álbum Aniversário do Lucca" [ref=f2e109]:
+          - img "Retrato de Lucca segurando um balão azul" [ref=f2e111]
+          - generic [ref=f2e112]:
+            - generic [ref=f2e113]:
+              - generic [ref=f2e114]: Aniversário infantil
+              - generic [ref=f2e115]: Aniversário do Lucca
+            - generic [ref=f2e116]:
+              - text: 03 imagens
+              - generic [ref=f2e117]: ↗
+        - button "Abrir álbum Hadassa · 15 anos" [ref=f2e118]:
+          - img "Hadassa com vestido azul e uma rosa em seu aniversário de 15 anos" [ref=f2e120]
+          - generic [ref=f2e121]:
+            - generic [ref=f2e122]:
+              - generic [ref=f2e123]: Festa de 15 anos
+              - generic [ref=f2e124]: Hadassa · 15 anos
+            - generic [ref=f2e125]:
+              - text: 03 imagens
+              - generic [ref=f2e126]: ↗
+        - button "Abrir álbum Júnior & Milli" [ref=f2e127]:
+          - img "Júnior fazendo o pedido a Milli à beira-mar" [ref=f2e129]
+          - generic [ref=f2e130]:
+            - generic [ref=f2e131]:
+              - generic [ref=f2e132]: Pedido à beira-mar
+              - generic [ref=f2e133]: Júnior & Milli
+            - generic [ref=f2e134]:
+              - text: 03 imagens
+              - generic [ref=f2e135]: ↗
+      - generic [ref=f2e136]:
+        - paragraph [ref=f2e137]: Ensaios e eventos organizados por história, com as imagens completas.
+        - link "Ver mais no Instagram ↗" [ref=f2e138] [cursor=pointer]:
+          - /url: https://www.instagram.com/matheusfotografiasz/
+          - text: Ver mais no Instagram
+          - generic [ref=f2e139]: ↗
+    - region [ref=f2e140]:
+      - generic [ref=f2e141]:
+        - generic "Sequência de imagens do portfólio" [ref=f2e142]:
+          - figure [ref=f2e143]:
+            - img "Júnior fazendo um pedido a Milli à beira-mar" [ref=f2e144]
+          - figure [ref=f2e145]:
+            - img "Hadassa em seu retrato de 15 anos" [ref=f2e146]
+          - figure [ref=f2e147]:
+            - img "Retrato de Lucca em seu aniversário" [ref=f2e148]
+          - generic [aria-hidden] [ref=f2e149]: MB
+        - generic [ref=f2e150]:
+          - paragraph [ref=f2e151]: Interlúdio visual
+          - heading [level=2] [ref=f2e152]:
+            - text: O instante
+            - emphasis [ref=f2e153]: ganha ritmo.
+          - paragraph [ref=f2e154]: "Deslize para atravessar três atmosferas do olhar do Matheus: presença, promessa e movimento."
+          - generic [ref=f2e155]:
+            - generic [ref=f2e156]: "01"
+            - generic [ref=f2e158]: "03"
+      - generic [aria-hidden]:
+        - article:
+          - generic: "01"
+          - generic: Presença
+        - article:
+          - generic: "02"
+          - generic: Promessa
+        - article:
+          - generic: "03"
+          - generic: Movimento
+    - region [ref=f2e159]:
+      - generic [ref=f2e160]:
+        - paragraph [ref=f2e161]: 03 — Especialidades
+        - heading "Do silêncio ao movimento." [level=2] [ref=f2e162]
+        - paragraph [ref=f2e163]: Uma linguagem sensível, adaptada ao ritmo de cada história.
+      - generic [ref=f2e164]:
+        - article [ref=f2e165]:
+          - img "Casal durante recepção de casamento" [ref=f2e166]
+          - generic [ref=f2e167]:
+            - generic [ref=f2e168]: "01"
+            - heading "Casamentos" [level=3] [ref=f2e169]
+            - paragraph [ref=f2e170]: Cerimônia, retratos e tudo o que acontece sem aviso.
+            - button "Ver casamentos ↗" [ref=f2e171]:
+              - text: Ver casamentos
+              - generic [ref=f2e172]: ↗
+        - article [ref=f2e173]:
+          - img "Cenografia de festa de 15 anos" [ref=f2e174]
+          - generic [ref=f2e175]:
+            - generic [ref=f2e176]: "02"
+            - heading "Aniversários" [level=3] [ref=f2e177]
+            - paragraph [ref=f2e178]: "Da ambientação aos abraços: uma narrativa completa."
+            - button "Ver aniversários ↗" [ref=f2e179]:
+              - text: Ver aniversários
+              - generic [ref=f2e180]: ↗
+        - article [ref=f2e181]:
+          - img "Casal em ensaio à beira-mar" [ref=f2e182]
+          - generic [ref=f2e183]:
+            - generic [ref=f2e184]: "03"
+            - heading "Ensaios" [level=3] [ref=f2e185]
+            - paragraph [ref=f2e186]: Direção leve para imagens naturais e cheias de identidade.
+            - button "Ver ensaios ↗" [ref=f2e187]:
+              - text: Ver ensaios
+              - generic [ref=f2e188]: ↗
+        - article [ref=f2e189]:
+          - img "Criança dançando em apresentação" [ref=f2e190]
+          - generic [ref=f2e191]:
+            - generic [ref=f2e192]: "04"
+            - heading "Eventos & apresentações" [level=3] [ref=f2e193]
+            - paragraph [ref=f2e194]: Tempo, movimento e emoção no ponto exato.
+            - button "Ver eventos ↗" [ref=f2e195]:
+              - text: Ver eventos
+              - generic [ref=f2e196]: ↗
+      - generic [ref=f2e197]:
+        - generic [ref=f2e198]: Outras frentes no perfil
+        - paragraph [ref=f2e199]: Esportes, automotivo e filme também fazem parte do olhar do Matheus. O portfólio cresce junto com novas histórias e entregas autorizadas.
+        - link "Explorar Instagram ↗" [ref=f2e200] [cursor=pointer]:
+          - /url: https://www.instagram.com/matheusfotografiasz/
+          - text: Explorar Instagram
+          - generic [ref=f2e201]: ↗
+    - region [ref=f2e202]:
+      - generic [ref=f2e203]:
+        - paragraph [ref=f2e204]: 04 — Como funciona
+        - heading [level=2] [ref=f2e205]:
+          - text: Simples para você.
+          - emphasis [ref=f2e206]: Inteiro na entrega.
+        - paragraph [ref=f2e207]: Você conta o que imagina. Eu organizo o olhar, o ritmo e os detalhes para que você possa viver o momento sem se preocupar com o registro.
+      - list [ref=f2e208]:
+        - listitem [ref=f2e209]:
+          - generic [ref=f2e210]: "01"
+          - generic [ref=f2e211]:
+            - heading "Conversa" [level=3] [ref=f2e212]
+            - paragraph [ref=f2e213]: Entendo a data, o lugar, o estilo e o que não pode faltar.
+        - listitem [ref=f2e214]:
+          - generic [ref=f2e215]: "02"
+          - generic [ref=f2e216]:
+            - heading "Planejamento" [level=3] [ref=f2e217]
+            - paragraph [ref=f2e218]: Alinhamos formato, cobertura e referências antes do dia.
+        - listitem [ref=f2e219]:
+          - generic [ref=f2e220]: "03"
+          - generic [ref=f2e221]:
+            - heading "Registro" [level=3] [ref=f2e222]
+            - paragraph [ref=f2e223]: Direção quando necessário, discrição quando o momento pede.
+        - listitem [ref=f2e224]:
+          - generic [ref=f2e225]: "04"
+          - generic [ref=f2e226]:
+            - heading "Entrega" [level=3] [ref=f2e227]
+            - paragraph [ref=f2e228]: Seleção e tratamento com cuidado para preservar a verdade de cada imagem.
+    - region [ref=f2e229]:
+      - img "Matheus Barros fotografando" [ref=f2e231]
+      - generic [ref=f2e232]:
+        - paragraph [ref=f2e233]: 05 — Sobre
+        - heading "Matheus Barros" [level=2] [ref=f2e234]
+        - paragraph [ref=f2e235]: Fotógrafo & filmmaker · Maracanaú, CE
+        - paragraph [ref=f2e236]: "Um olhar versátil para histórias que mudam de ritmo: do detalhe calmo de um ensaio à energia de uma apresentação; da chegada de um casamento à personalidade de um projeto automotivo."
+        - paragraph [ref=f2e237]: A proposta é criar registros vivos, com cor, presença e espaço para as pessoas serem elas mesmas.
+        - generic [ref=f2e238]:
+          - link "@matheusfotografiasz ↗" [ref=f2e239] [cursor=pointer]:
+            - /url: https://www.instagram.com/matheusfotografiasz/
+            - text: "@matheusfotografiasz"
+            - generic [ref=f2e240]: ↗
+          - link "Álbuns na Banlek ↗" [ref=f2e241] [cursor=pointer]:
+            - /url: https://banlek.com/Matheusfts
+            - text: Álbuns na Banlek
+            - generic [ref=f2e242]: ↗
+    - region [ref=f2e243]:
+      - generic [ref=f2e244]:
+        - paragraph [ref=f2e245]: 06 — Vamos conversar
+        - heading [level=2] [ref=f2e246]:
+          - text: Qual história
+          - emphasis [ref=f2e247]: vamos contar?
+        - paragraph [ref=f2e248]: Preencha o briefing rápido. A página prepara uma mensagem com os pontos essenciais para você enviar ao Matheus pelo Instagram.
+        - generic [ref=f2e249]:
+          - generic [ref=f2e250]: Canal oficial
+          - link "Instagram · @matheusfotografiasz ↗" [ref=f2e251] [cursor=pointer]:
+            - /url: https://www.instagram.com/matheusfotografiasz/
+      - generic [ref=f2e252]:
+        - generic [ref=f2e253]:
+          - generic [ref=f2e254]:
+            - generic [ref=f2e255]: Seu nome
+            - textbox "Seu nome" [ref=f2e256]:
+              - /placeholder: Como posso te chamar?
+          - generic [ref=f2e257]:
+            - generic [ref=f2e258]: Seu WhatsApp
+            - textbox "Seu WhatsApp" [ref=f2e259]:
+              - /placeholder: (85) 99999-9999
+        - generic [ref=f2e260]:
+          - generic [ref=f2e261]:
+            - generic [ref=f2e262]: Tipo de trabalho
+            - combobox "Tipo de trabalho" [ref=f2e263]:
+              - option "Selecione uma opção" [selected]
+              - option "Casamento"
+              - option "Aniversário / evento"
+              - option "Ensaio"
+              - option "Esporte / apresentação"
+              - option "Automotivo"
+              - option "Filme"
+              - option "Outro"
+          - generic [ref=f2e264]:
+            - generic [ref=f2e265]: Data prevista
+            - textbox "Data prevista" [ref=f2e266]
+        - generic [ref=f2e267]:
+          - generic [ref=f2e268]: Cidade ou local do evento
+          - textbox "Cidade ou local do evento" [ref=f2e269]:
+            - /placeholder: "Ex.: Maracanaú, CE"
+        - generic [ref=f2e270]:
+          - generic [ref=f2e271]: Conte um pouco sobre a ideia
+          - textbox "Conte um pouco sobre a ideia" [ref=f2e272]:
+            - /placeholder: Local, horário, quantidade de pessoas e o que você imagina para o registro…
+        - generic [ref=f2e273]:
+          - checkbox "Entendo que os dados ficam apenas neste navegador até eu copiar e enviar a mensagem." [ref=f2e274]
+          - generic [ref=f2e275]: Entendo que os dados ficam apenas neste navegador até eu copiar e enviar a mensagem.
+        - button "Preparar pedido de orçamento ↗" [ref=f2e276] [cursor=pointer]:
+          - text: Preparar pedido de orçamento
+          - generic [ref=f2e277]: ↗
+  - contentinfo [ref=f2e278]:
+    - link "MB Matheus Barros fotógrafo & filmmaker" [ref=f2e279] [cursor=pointer]:
+      - /url: "#inicio"
+      - generic [ref=f2e280]: MB
+      - generic [ref=f2e281]:
+        - text: Matheus Barros
+        - generic [ref=f2e282]: fotógrafo & filmmaker
+    - paragraph [ref=f2e283]: Fotografia, filme e histórias reais.Maracanaú, Ceará.
+    - generic [ref=f2e284]:
+      - link "Instagram ↗" [ref=f2e285] [cursor=pointer]:
+        - /url: https://www.instagram.com/matheusfotografiasz/
+      - link "Banlek ↗" [ref=f2e286] [cursor=pointer]:
+        - /url: https://banlek.com/Matheusfts
+    - paragraph [ref=f2e287]: © 2026 Matheus Barros.
+  - link "Pedir orçamento ↗" [ref=f2e288] [cursor=pointer]:
+    - /url: "#orcamento"
+    - text: Pedir orçamento
+    - generic [ref=f2e289]: ↗

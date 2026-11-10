@@ -50,6 +50,21 @@ menuToggle.addEventListener("click", () => {
 siteNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("resize", () => { if (window.innerWidth > 840) closeMenu(); });
 
+const focusStage = $(".focus-stage");
+if (focusStage && window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  focusStage.addEventListener("pointermove", (event) => {
+    const bounds = focusStage.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
+    focusStage.style.setProperty("--focus-x", (x * 12).toFixed(2) + "px");
+    focusStage.style.setProperty("--focus-y", (y * 12).toFixed(2) + "px");
+  });
+  focusStage.addEventListener("pointerleave", () => {
+    focusStage.style.setProperty("--focus-x", "0px");
+    focusStage.style.setProperty("--focus-y", "0px");
+  });
+}
+
 const motionStory = $(".motion-story");
 const motionFrames = $$(".motion-frame");
 const motionSteps = $$(".motion-story-steps article");
@@ -82,14 +97,23 @@ motionReduced.addEventListener?.("change", requestMotionUpdate);
 updateMotionStory();
 
 const filteredProjects = () => activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter);
+const mountProjectCards = () => {
+  const cards = $$(".photo-card", photoGrid);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    cards.forEach((card) => card.classList.add("is-ready"));
+    return;
+  }
+  window.requestAnimationFrame(() => cards.forEach((card) => card.classList.add("is-ready")));
+};
 const renderProjects = () => {
   if (!photoGrid) return;
   photoGrid.innerHTML = filteredProjects().map((project, index) =>
-    '<button class="photo-card ' + (project.layout || "") + '" type="button" data-project-id="' + project.id + '" aria-label="Abrir álbum ' + project.title + '">' +
-      '<img src="' + project.cover + '" alt="' + project.images[0].alt + '" loading="' + (index < 2 ? "eager" : "lazy") + '" width="720" height="900" />' +
-      '<span class="photo-meta"><b>' + project.title + '</b><small>' + project.categoryLabel + ' · ' + project.images.length + ' fotos</small></span>' +
+    '<button class="photo-card photo-card-' + (project.coverOrientation || "portrait") + '" style="--card-index:' + index + '" type="button" data-project-id="' + project.id + '" aria-label="Abrir álbum ' + project.title + '">' +
+      '<span class="photo-card-media"><img src="' + project.cover + '" alt="' + project.images[0].alt + '" loading="' + (index < 2 ? "eager" : "lazy") + '" /></span>' +
+      '<span class="photo-meta"><span><small>' + project.categoryLabel + '</small><b>' + project.title + '</b></span><span class="photo-count">' + String(project.images.length).padStart(2, "0") + ' imagens <i>↗</i></span></span>' +
     '</button>'
   ).join("");
+  mountProjectCards();
 };
 const setFilter = (filter) => {
   activeFilter = filter;
@@ -105,12 +129,15 @@ filterButtons.forEach((button) => button.addEventListener("click", () => setFilt
 const openProject = (project, trigger) => {
   activeProject = project;
   lastProjectTrigger = trigger;
+  const sourceLink = project.sourceUrl
+    ? '<a class="text-link text-link-dark" href="' + project.sourceUrl + '" target="_blank" rel="noreferrer">' + project.sourceLabel + ' <span>↗</span></a>'
+    : '<span class="project-local-note">Seleção completa no portfólio</span>';
   projectDetail.innerHTML =
     '<div class="project-detail-head"><div><p class="section-index">' + project.categoryLabel + '</p><h2 id="project-detail-title">' + project.title + '</h2></div><p>' + project.description + '</p></div>' +
     '<div class="project-dialog-grid">' + project.images.map((image, index) =>
       '<button class="project-image-button" type="button" data-project-image="' + index + '" aria-label="Abrir ' + image.alt + '"><img src="' + image.src + '" alt="' + image.alt + '" loading="lazy" width="900" height="1100" /><span>' + String(index + 1).padStart(2, "0") + '</span></button>'
     ).join("") + '</div>' +
-    '<div class="project-detail-footer"><a class="text-link text-link-dark" href="' + project.sourceUrl + '" target="_blank" rel="noreferrer">' + project.sourceLabel + ' <span>↗</span></a><a class="button button-primary" href="#orcamento">Quero este olhar <span>↘</span></a></div>';
+    '<div class="project-detail-footer">' + sourceLink + '<a class="button button-primary" href="#orcamento">Quero este olhar <span>↘</span></a></div>';
   projectDialog.showModal();
   document.body.classList.add("project-open");
   $(".project-dialog-close").focus();
