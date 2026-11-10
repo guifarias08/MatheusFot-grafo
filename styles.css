@@ -1203,10 +1203,6 @@ h2 em {
   white-space: nowrap;
 }
 
-.mobile-cta {
-  display: none;
-}
-
 .lightbox {
   width: 100vw;
   max-width: none;
@@ -1527,10 +1523,6 @@ h2 em {
     display: block;
   }
 
-  body.menu-open .mobile-cta {
-    display: none;
-  }
-
   .menu-toggle[aria-expanded="true"] > span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -1621,10 +1613,6 @@ h2 em {
 }
 
 @media (max-width: 560px) {
-  body {
-    padding-bottom: 68px;
-  }
-
   .site-header .brand-mark {
     width: 38px;
     height: 38px;
@@ -1821,26 +1809,6 @@ h2 em {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 48px 20px;
-  }
-
-  .mobile-cta {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
-    z-index: 90;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 50px;
-    padding: 0 18px;
-    color: var(--ink);
-    background: var(--lime);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
   }
 
   .lightbox {
@@ -2950,8 +2918,7 @@ h2 em {
 }
 
 .text-link::after,
-.nav-cta::after,
-.mobile-cta::after {
+.nav-cta::after {
   width: 7px;
   height: 7px;
   content: "";
@@ -2962,8 +2929,7 @@ h2 em {
 }
 
 .text-link:hover::after,
-.nav-cta:hover::after,
-.mobile-cta:hover::after {
+.nav-cta:hover::after {
   transform: translate(2px, -2px) rotate(45deg);
 }
 
@@ -3115,5 +3081,104 @@ h2 em {
 
   .about-visual {
     padding: 9px;
+  }
+}
+
+/* Sobre: um retrato editorial, quente e leve, sem competir com o texto. */
+.about {
+  gap: clamp(44px, 8vw, 108px);
+}
+
+.about-visual {
+  width: min(100%, 620px);
+  padding: clamp(12px, 1.8vw, 20px);
+  border: 1px solid rgba(184, 117, 90, 0.42);
+  background: linear-gradient(145deg, var(--paper-bright) 0%, var(--sand) 100%);
+  box-shadow: 12px 12px 0 rgba(184, 117, 90, 0.24);
+}
+
+.about-visual > img.about-photo {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(17, 17, 15, 0.12);
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-copy {
+  max-width: 580px;
+}
+
+.about-copy > p:not(.section-index, .about-kicker) {
+  max-width: 560px;
+}
+
+.about-links {
+  margin-top: 32px;
+}
+
+/* Especialidades: o grid ganha ritmo e usa imagens de apoio, não as capas dos projetos. */
+.service-grid {
+  align-items: start;
+  gap: 22px 18px;
+}
+
+.service-card {
+  border-color: rgba(17, 17, 15, 0.16);
+  background: rgba(255, 253, 247, 0.68);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.service-card:nth-child(even) {
+  margin-top: 42px;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 0 rgba(184, 117, 90, 0.18);
+}
+
+.service-card img {
+  filter: saturate(0.86) contrast(0.98);
+}
+
+.service-card > div {
+  padding: 24px 22px 26px;
+}
+
+@media (max-width: 840px) {
+  .about-visual {
+    justify-self: center;
+  }
+
+  .about-copy {
+    max-width: 620px;
+  }
+
+  .service-card:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .service-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 620px) {
+  .about-visual {
+    width: min(100%, 540px);
+    padding: 10px;
+    box-shadow: 8px 8px 0 rgba(184, 117, 90, 0.24);
+  }
+
+  .about-links {
+    margin-top: 26px;
+  }
+
+  .service-grid {
+    gap: 18px;
+  }
+
+  .service-card > div {
+    padding: 20px 18px 22px;
   }
 }
