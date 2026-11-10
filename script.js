@@ -70,17 +70,35 @@ const motionFrames = $$(".motion-frame");
 const motionSteps = $$(".motion-story-steps article");
 const motionCurrent = $("#motion-current");
 let motionFrameRequest = 0;
+let motionAutoTimer = 0;
 const motionReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+const motionCompact = window.matchMedia("(max-width: 840px)");
+
+const setMotionFrame = (activeIndex) => {
+  motionFrames.forEach((frame, index) => frame.classList.toggle("is-active", index === activeIndex));
+  motionSteps.forEach((step, index) => step.classList.toggle("is-active", index === activeIndex));
+  if (motionCurrent) motionCurrent.textContent = String(activeIndex + 1).padStart(2, "0");
+};
 
 const updateMotionStory = () => {
-  if (!motionStory || motionReduced.matches) return;
+  if (!motionStory || motionReduced.matches || motionCompact.matches) return;
   const bounds = motionStory.getBoundingClientRect();
   const travel = Math.max(motionStory.offsetHeight - window.innerHeight, 1);
   const progress = Math.min(Math.max(-bounds.top / travel, 0), 1);
   const activeIndex = Math.min(motionFrames.length - 1, Math.floor(progress * motionFrames.length));
-  motionFrames.forEach((frame, index) => frame.classList.toggle("is-active", index === activeIndex));
-  motionSteps.forEach((step, index) => step.classList.toggle("is-active", index === activeIndex));
-  if (motionCurrent) motionCurrent.textContent = String(activeIndex + 1).padStart(2, "0");
+  setMotionFrame(activeIndex);
+};
+
+const startMotionLoop = () => {
+  window.clearInterval(motionAutoTimer);
+  motionAutoTimer = 0;
+  if (!motionCompact.matches || motionReduced.matches || !motionFrames.length) return;
+  let activeIndex = 0;
+  setMotionFrame(activeIndex);
+  motionAutoTimer = window.setInterval(() => {
+    activeIndex = (activeIndex + 1) % motionFrames.length;
+    setMotionFrame(activeIndex);
+  }, 4200);
 };
 
 const requestMotionUpdate = () => {
@@ -93,7 +111,9 @@ const requestMotionUpdate = () => {
 
 window.addEventListener("scroll", requestMotionUpdate, { passive: true });
 window.addEventListener("resize", requestMotionUpdate);
-motionReduced.addEventListener?.("change", requestMotionUpdate);
+motionReduced.addEventListener?.("change", () => { startMotionLoop(); requestMotionUpdate(); });
+motionCompact.addEventListener?.("change", () => { startMotionLoop(); requestMotionUpdate(); });
+startMotionLoop();
 updateMotionStory();
 
 const filteredProjects = () => activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter);
@@ -110,7 +130,7 @@ const renderProjects = () => {
   photoGrid.innerHTML = filteredProjects().map((project, index) =>
     '<button class="photo-card photo-card-' + (project.coverOrientation || "portrait") + '" style="--card-index:' + index + '" type="button" data-project-id="' + project.id + '" aria-label="Abrir álbum ' + project.title + '">' +
       '<span class="photo-card-media"><img src="' + project.cover + '" alt="' + project.images[0].alt + '" loading="' + (index < 2 ? "eager" : "lazy") + '" /></span>' +
-      '<span class="photo-meta"><span><small>' + project.categoryLabel + '</small><b>' + project.title + '</b></span><span class="photo-count">' + String(project.images.length).padStart(2, "0") + ' imagens <i>↗</i></span></span>' +
+      '<span class="photo-meta"><span><small>' + project.categoryLabel + '</small><b>' + project.title + '</b></span><span class="photo-count">' + String(project.images.length).padStart(2, "0") + ' imagens</span></span>' +
     '</button>'
   ).join("");
   mountProjectCards();
@@ -130,14 +150,14 @@ const openProject = (project, trigger) => {
   activeProject = project;
   lastProjectTrigger = trigger;
   const sourceLink = project.sourceUrl
-    ? '<a class="text-link text-link-dark" href="' + project.sourceUrl + '" target="_blank" rel="noreferrer">' + project.sourceLabel + ' <span>↗</span></a>'
+    ? '<a class="text-link text-link-dark" href="' + project.sourceUrl + '" target="_blank" rel="noreferrer">' + project.sourceLabel + '</a>'
     : '<span class="project-local-note">Seleção completa no portfólio</span>';
   projectDetail.innerHTML =
     '<div class="project-detail-head"><div><p class="section-index">' + project.categoryLabel + '</p><h2 id="project-detail-title">' + project.title + '</h2></div><p>' + project.description + '</p></div>' +
     '<div class="project-dialog-grid">' + project.images.map((image, index) =>
       '<button class="project-image-button" type="button" data-project-image="' + index + '" aria-label="Abrir ' + image.alt + '"><img src="' + image.src + '" alt="' + image.alt + '" loading="lazy" width="900" height="1100" /><span>' + String(index + 1).padStart(2, "0") + '</span></button>'
     ).join("") + '</div>' +
-    '<div class="project-detail-footer">' + sourceLink + '<a class="button button-primary" href="#orcamento">Quero este olhar <span>↘</span></a></div>';
+    '<div class="project-detail-footer">' + sourceLink + '<a class="button button-primary" href="#orcamento">Quero este olhar</a></div>';
   projectDialog.showModal();
   document.body.classList.add("project-open");
   $(".project-dialog-close").focus();
@@ -223,7 +243,7 @@ form.addEventListener("submit", (event) => {
 });
 copyButton.addEventListener("click", async () => {
   try { await navigator.clipboard.writeText(preparedMessage.value); } catch { preparedMessage.select(); document.execCommand("copy"); }
-  copyButton.textContent = "Mensagem copiada ✓";
+  copyButton.textContent = "Mensagem copiada";
   window.setTimeout(() => { copyButton.textContent = "Copiar mensagem"; }, 2200);
 });
 
