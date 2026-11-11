@@ -116,7 +116,25 @@ motionCompact.addEventListener?.("change", () => { startMotionLoop(); requestMot
 startMotionLoop();
 updateMotionStory();
 
-const filteredProjects = () => activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter);
+const projectPriority = [
+  "andreia-30-anos",
+  "aniversario-lucca",
+  "hadassa-15-anos",
+  "junior-e-milli",
+  "casamento-noite",
+  "apresentacoes-infantis",
+  "festa-15-anos",
+];
+const filteredProjects = () => {
+  const visible = activeFilter === "all"
+    ? projects.slice()
+    : projects.filter((project) => project.category === activeFilter || project.tags?.includes(activeFilter));
+  return visible.sort((a, b) => {
+    const aPriority = projectPriority.indexOf(a.id);
+    const bPriority = projectPriority.indexOf(b.id);
+    return (aPriority < 0 ? 999 : aPriority) - (bPriority < 0 ? 999 : bPriority);
+  });
+};
 const mountProjectCards = () => {
   const cards = $$(".photo-card", photoGrid);
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -214,11 +232,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") setLightboxImage(lightboxIndex - 1);
   if (event.key === "ArrowRight") setLightboxImage(lightboxIndex + 1);
 });
-
-$$(".service-filter").forEach((button) => button.addEventListener("click", () => {
-  setFilter(button.dataset.serviceFilter);
-  $("#trabalhos").scrollIntoView({ behavior: "smooth", block: "start" });
-}));
 
 const formatDate = (value) => {
   if (!value) return "a definir";
