@@ -53,7 +53,7 @@ const projectPriority = [
   "aniversario-lucca",
   "hadassa-15-anos",
   "junior-e-milli",
-  "casamento-noite",
+  "casamento-ana-e-joao",
   "apresentacoes-infantis",
   "festa-15-anos",
 ];
