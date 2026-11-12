@@ -80,9 +80,9 @@ const mountProjectCards = () => {
 
 const renderProjects = () => {
   photoGrid.innerHTML = filteredProjects().map((project, index) =>
-    `<button class="photo-card photo-card-${project.coverOrientation || "portrait"}" style="--card-index:${index}" type="button" data-project-id="${project.id}" aria-label="Abrir álbum ${project.title}">
+    `<button class="photo-card photo-card-${project.coverOrientation || "portrait"}" style="--card-index:${index}" type="button" data-project-id="${project.id}" data-category="${project.category}" aria-label="Abrir álbum ${project.title}">
       <span class="photo-card-media"><img src="${project.cover}" alt="${project.images[0].alt}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" /></span>
-      <span class="photo-meta"><span><small>${project.categoryLabel}</small><b>${project.title}</b></span><span class="photo-meta-bottom"><span class="photo-count">${String(project.images.length).padStart(2, "0")} imagens</span><span class="photo-card-cta">Abrir capítulo</span></span></span>
+      <span class="photo-meta"><span class="photo-meta-main"><small>${project.categoryLabel}</small><b>${project.title}</b><span class="photo-summary">${project.description}</span></span><span class="photo-meta-bottom"><span class="photo-count">${String(project.images.length).padStart(2, "0")} imagens</span><span class="photo-card-cta">Abrir capítulo</span></span></span>
     </button>`
   ).join("");
   mountProjectCards();
@@ -108,7 +108,7 @@ const openProject = (project, trigger) => {
     `<div class="project-dialog-grid">${project.images.map((image, index) =>
       `<button class="project-image-button" type="button" data-project-image="${index}" aria-label="Abrir ${image.alt}"><img src="${image.src}" alt="${image.alt}" loading="lazy" width="900" height="1100" /><span>${String(index + 1).padStart(2, "0")}</span></button>`
     ).join("")}</div>` +
-    `<div class="project-detail-footer">${sourceLink}<a class="button button-primary" href="https://www.instagram.com/matheusfotografiasz/" target="_blank" rel="noreferrer">Pedir orçamento <span aria-hidden="true">↗</span></a></div>`;
+    `<div class="project-detail-footer">${sourceLink}<a class="button button-primary" href="https://www.instagram.com/matheusfotografiasz/" target="_blank" rel="noreferrer">Pedir orçamento <span class="link-arrow" aria-hidden="true"></span></a></div>`;
   projectDialog.showModal();
   document.body.classList.add("project-open");
   $(".project-dialog-close").focus();

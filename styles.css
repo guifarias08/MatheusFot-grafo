@@ -5482,6 +5482,191 @@ html:has(.editorial-gallery-site) {
   }
 }
 
+/* Final polish: cards de serviço mais claros e símbolos desenhados em CSS. */
+.editorial-gallery-site .link-arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.editorial-gallery-site .link-arrow-down {
+  transform: rotate(135deg);
+}
+
+.editorial-gallery-site .button:hover .link-arrow,
+.editorial-gallery-site .text-link:hover .link-arrow,
+.editorial-gallery-site .nav-cta:hover .link-arrow {
+  transform: translate(2px, -2px) rotate(45deg);
+}
+
+.editorial-gallery-site .button:hover .link-arrow-down {
+  transform: translate(2px, 2px) rotate(135deg);
+}
+
+.editorial-gallery-site .project-dialog-close,
+.editorial-gallery-site .lightbox-close {
+  position: absolute;
+}
+
+.editorial-gallery-site .project-dialog-close::before,
+.editorial-gallery-site .project-dialog-close::after,
+.editorial-gallery-site .lightbox-close::before,
+.editorial-gallery-site .lightbox-close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.editorial-gallery-site .project-dialog-close::after,
+.editorial-gallery-site .lightbox-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.editorial-gallery-site .photo-card {
+  gap: 0;
+}
+
+.editorial-gallery-site .photo-card-media {
+  padding: clamp(14px, 1.7vw, 24px);
+  background:
+    linear-gradient(140deg, rgba(246, 243, 237, 0.07), transparent 42%),
+    #0b0b0a;
+  border-color: rgba(246, 243, 237, 0.2);
+}
+
+.editorial-gallery-site .photo-card[data-category="ensaios"] .photo-card-media {
+  background:
+    linear-gradient(140deg, rgba(223, 230, 160, 0.13), transparent 45%),
+    #0b0b0a;
+}
+
+.editorial-gallery-site .photo-card[data-category="aniversarios"] .photo-card-media {
+  background:
+    linear-gradient(140deg, rgba(240, 90, 67, 0.13), transparent 45%),
+    #0b0b0a;
+}
+
+.editorial-gallery-site .photo-card[data-category="eventos"] .photo-card-media {
+  background:
+    linear-gradient(140deg, rgba(168, 162, 154, 0.14), transparent 45%),
+    #0b0b0a;
+}
+
+.editorial-gallery-site .photo-card[data-category="casamentos"] .photo-card-media {
+  background:
+    linear-gradient(140deg, rgba(203, 63, 44, 0.14), transparent 45%),
+    #0b0b0a;
+}
+
+.editorial-gallery-site .photo-meta {
+  min-height: 148px;
+  padding: 21px 2px 0;
+  align-items: flex-start;
+}
+
+.editorial-gallery-site .photo-meta-main {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.editorial-gallery-site .photo-meta-main small {
+  margin: 0;
+  color: var(--accent);
+}
+
+.editorial-gallery-site .photo-meta b {
+  max-width: 520px;
+  font-size: clamp(28px, 2.65vw, 42px);
+  line-height: 0.98;
+}
+
+.editorial-gallery-site .photo-summary {
+  max-width: 420px;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.editorial-gallery-site .photo-meta-bottom {
+  min-width: 112px;
+  padding-top: 4px;
+}
+
+.editorial-gallery-site .photo-card-cta {
+  white-space: nowrap;
+}
+
+.editorial-gallery-site .filter-button {
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+}
+
+.editorial-gallery-site .filter-button:hover,
+.editorial-gallery-site .filter-button.is-active {
+  border-color: rgba(246, 243, 237, 0.24);
+  background: rgba(246, 243, 237, 0.06);
+}
+
+@media (max-width: 700px) {
+  .editorial-gallery-site .link-arrow {
+    display: none;
+  }
+
+  .editorial-gallery-site .button,
+  .editorial-gallery-site .text-link,
+  .editorial-gallery-site .nav-cta {
+    gap: 0;
+  }
+
+  .editorial-gallery-site .photo-grid {
+    gap: 60px 0;
+  }
+
+  .editorial-gallery-site .photo-card-media {
+    padding: 12px;
+  }
+
+  .editorial-gallery-site .photo-meta {
+    min-height: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 18px;
+  }
+
+  .editorial-gallery-site .photo-meta b {
+    font-size: clamp(29px, 9vw, 40px);
+  }
+
+  .editorial-gallery-site .photo-summary {
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .editorial-gallery-site .photo-meta-bottom {
+    width: 100%;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+}
+
 /* ========================================================================== */
 /* ESTRUTURA FINAL — APRESENTAÇÃO + SERVIÇOS                                  */
 /* ========================================================================== */
