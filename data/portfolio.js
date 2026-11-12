@@ -20,8 +20,8 @@ window.portfolioProjects = [
     ],
   },
   {
-    id: "casamento-noite",
-    title: "Casamento à noite",
+    id: "casamento-ana-e-joao",
+    title: "Casamento ana e joão",
     category: "casamentos",
     categoryLabel: "Casamentos e cerimônias",
     cover: "assets/casamento-entrada.jpg",
