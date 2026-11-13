@@ -9,10 +9,7 @@ window.portfolioProjects = [
     categoryLabel: "Aniversários / 15 anos",
     cover: "assets/festa-15-anos.jpg",
     coverOrientation: "landscape",
-    layout: "photo-card-wide",
     description: "Uma narrativa que começa na cenografia e continua em cada gesto da celebração.",
-    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
-    sourceLabel: "Ver seleção no Instagram",
     images: [
       { src: "assets/festa-15-anos.jpg", alt: "Cenografia completa de festa de 15 anos em tons de lilás" },
       { src: "assets/aniversariante.jpg", alt: "Aniversariante de 15 anos em frente ao bolo" },
@@ -21,15 +18,12 @@ window.portfolioProjects = [
   },
   {
     id: "casamento-Ana-e-Joao",
-    title: "Casamento Ana e João",
+    title: "Casamento à noite",
     category: "casamentos",
     categoryLabel: "Casamentos e cerimônias",
     cover: "assets/casamento-entrada.jpg",
     coverOrientation: "portrait",
-    layout: "photo-card-tall",
     description: "Chegadas, encontros e os pequenos sinais que fazem o dia ser só de vocês.",
-    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
-    sourceLabel: "Ver seleção no Instagram",
     images: [
       { src: "assets/casamento-entrada.jpg", alt: "Noiva entrando acompanhada durante casamento" },
       { src: "assets/casamento-casal.jpg", alt: "Noiva e noivo durante a recepção de casamento" },
@@ -44,10 +38,7 @@ window.portfolioProjects = [
     categoryLabel: "Eventos e apresentações",
     cover: "assets/evento-infantil-danca.jpg",
     coverOrientation: "portrait",
-    layout: "photo-card-wide",
     description: "Cor, movimento e a espontaneidade de quem ainda está descobrindo o palco.",
-    sourceUrl: "https://www.instagram.com/matheusfotografiasz/",
-    sourceLabel: "Ver seleção no Instagram",
     images: [
       { src: "assets/evento-infantil-danca.jpg", alt: "Criança dançando em apresentação escolar" },
       { src: "assets/evento-infantil-retrato.jpg", alt: "Retrato infantil com figurino junino" },
@@ -62,8 +53,6 @@ window.portfolioProjects = [
     cover: "assets/andreia-30-familia.jpg",
     coverOrientation: "landscape",
     description: "Uma celebração em cores vivas, organizada como uma história de encontros, carinho e família.",
-    sourceUrl: "https://drive.google.com/drive/folders/1FjsuFtka5sk_B_ctzOWZlMxZIEeZlucN",
-    sourceLabel: "Abrir álbum no Drive",
     images: [
       { src: "assets/andreia-30-familia.jpg", alt: "Andreia com familiares diante da decoração de 30 anos" },
       { src: "assets/andreia-30-afeto.jpg", alt: "Andreia recebendo um beijo entre familiares" },
@@ -80,8 +69,6 @@ window.portfolioProjects = [
     cover: "assets/lucca-retrato.jpg",
     coverOrientation: "portrait",
     description: "Retratos, afeto e pequenos detalhes para contar o primeiro aniversário de Lucca.",
-    sourceUrl: "https://drive.google.com/drive/folders/1l1Cb5OPpoTKHppF7Zkzcvudp3ybDtcZi",
-    sourceLabel: "Abrir álbum no Drive",
     images: [
       { src: "assets/lucca-retrato.jpg", alt: "Retrato de Lucca segurando um balão azul" },
       { src: "assets/lucca-familia.jpg", alt: "Lucca no colo de uma convidada durante a festa" },
@@ -98,8 +85,6 @@ window.portfolioProjects = [
     cover: "assets/hadassa-15-anos-retrato.jpg",
     coverOrientation: "portrait",
     description: "Azul profundo, brilho e retratos de uma noite construída ao redor da personalidade de Hadassa.",
-    sourceUrl: "https://drive.google.com/drive/folders/1RIUMIPHYtFj_S40l3fUL6dFlX9MvX-ca",
-    sourceLabel: "Abrir álbum no Drive",
     images: [
       { src: "assets/hadassa-15-anos-retrato.jpg", alt: "Hadassa com vestido azul e uma rosa em seu aniversário de 15 anos" },
       { src: "assets/hadassa-15-anos-bolo.jpg", alt: "Hadassa posando junto ao bolo de 15 anos" },
@@ -115,8 +100,6 @@ window.portfolioProjects = [
     cover: "assets/junior-milli-pedido.jpg",
     coverOrientation: "landscape",
     description: "Um pedido à beira-mar fotografado entre surpresa, riso e a luz suave do fim do dia.",
-    sourceUrl: "https://drive.google.com/drive/folders/1TrIpuOtI-a-6PMllMCXxpptmuDA4miqX",
-    sourceLabel: "Abrir álbum no Drive",
     images: [
       { src: "assets/junior-milli-pedido.jpg", alt: "Júnior fazendo o pedido a Milli à beira-mar" },
       { src: "assets/junior-milli-alianca.jpg", alt: "Júnior e Milli mostrando a aliança após o pedido" },
